@@ -8,6 +8,8 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
+// This is the API route for the Teacher resource, which includes the standard CRUD operations. Each route is mapped to a corresponding method in the TeacherController.
+
 Route::get('/teacher', [TeacherController::class, 'index']);
 Route::post('/teacher', [TeacherController::class, 'store']);
 Route::get('/teacher/{id}', [TeacherController::class, 'show']);
